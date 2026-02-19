@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "SkillAI Platform - MERN Stack",
   "scripts": {
-    "build": "npm install && npm install --prefix client && npm run build --prefix client && npm install --prefix server",
-    "start": "npm start --prefix server",
+    "build": "cd client && npm install && npm run build",
+    "start": "node server/index.js",
     "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\""
   },
   "dependencies": {
