@@ -1,0 +1,16 @@
+{
+  "name": "skill-ai-platform",
+  "version": "1.0.0",
+  "description": "SkillAI Platform - MERN Stack",
+  "scripts": {
+    "build": "npm install && npm install --prefix client && npm run build --prefix client && npm install --prefix server",
+    "start": "npm start --prefix server",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\""
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
