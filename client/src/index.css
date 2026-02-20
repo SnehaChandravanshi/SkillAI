@@ -21,6 +21,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  font-size: 14px;
+  /* Slightly smaller overall scaling (default 16px) */
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   min-width: 320px;
