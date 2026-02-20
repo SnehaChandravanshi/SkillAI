@@ -153,15 +153,15 @@ export default function Dashboard() {
       <div className="min-h-screen p-8 lg:p-12 container mx-auto max-w-[1800px]">
 
         {/* Welcome Section - HERO */}
-        <header className="mb-16 animate-fade-in relative">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/20 rounded-full blur-[120px] -z-10 mix-blend-screen animate-pulse-glow"></div>
-          <div className="absolute bottom-0 left-10 w-72 h-72 bg-purple-500/20 rounded-full blur-[100px] -z-10 mix-blend-screen"></div>
+        <header className="mb-12 lg:mb-16 animate-fade-in relative">
+          <div className="absolute top-0 right-0 w-64 h-64 lg:w-96 lg:h-96 bg-indigo-500/20 rounded-full blur-[80px] lg:blur-[120px] -z-10 mix-blend-screen animate-pulse-glow"></div>
+          <div className="absolute bottom-0 left-10 w-48 h-48 lg:w-72 lg:h-72 bg-purple-500/20 rounded-full blur-[60px] lg:blur-[100px] -z-10 mix-blend-screen"></div>
 
-          <h1 className="text-6xl lg:text-8xl font-black font-heading mb-6 tracking-tight">
+          <h1 className="text-4xl md:text-6xl lg:text-8xl font-black font-heading mb-4 lg:mb-6 tracking-tight flex items-center flex-wrap gap-4">
             <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Hello, Learner</span>
-            <span className="text-6xl lg:text-8xl ml-4">🚀</span>
+            <span className="text-4xl md:text-6xl lg:text-8xl">🚀</span>
           </h1>
-          <p className="text-slate-300 text-2xl lg:text-3xl font-light max-w-4xl leading-relaxed">
+          <p className="text-slate-300 text-lg md:text-2xl lg:text-3xl font-light max-w-4xl leading-relaxed">
             Ready to push your limits? Your personal AI mentor is standing by to guide your next breakthrough.
           </p>
         </header>
@@ -171,12 +171,12 @@ export default function Dashboard() {
           {/* =====================
               LEFT: PROGRESS LIST (Span 8 - WIDER)
           ====================== */}
-          <div className="lg:col-span-12 xl:col-span-8 h-[calc(100vh-180px)] overflow-y-auto pr-6 space-y-8 animate-slide-up scrollbar-hide" style={{ animationDelay: '0.1s' }}>
-            <div className="flex items-center justify-between mb-8 sticky top-0 bg-slate-900/80 backdrop-blur-2xl p-6 rounded-3xl z-20 border border-white/10 shadow-2xl supports-[backdrop-filter]:bg-slate-900/40">
-              <h2 className="text-4xl font-bold text-white font-heading flex items-center gap-4">
-                <span className="text-4xl filter drop-shadow-lg">📚</span> Your Paths
+          <div className="lg:col-span-12 xl:col-span-8 lg:h-[calc(100vh-180px)] lg:overflow-y-auto pr-0 lg:pr-6 space-y-8 animate-slide-up scrollbar-hide" style={{ animationDelay: '0.1s' }}>
+            <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 sticky top-0 bg-slate-900/80 backdrop-blur-2xl p-4 sm:p-6 rounded-3xl z-20 border border-white/10 shadow-2xl supports-[backdrop-filter]:bg-slate-900/40">
+              <h2 className="text-2xl sm:text-4xl font-bold text-white font-heading flex items-center gap-3 sm:gap-4">
+                <span className="text-3xl sm:text-4xl filter drop-shadow-lg">📚</span> Your Paths
               </h2>
-              <Link to="/skills" className="text-lg font-bold bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-300 hover:text-white px-6 py-3 rounded-2xl transition-all border border-indigo-500/30 flex items-center gap-2 shadow-lg shadow-indigo-900/20">
+              <Link to="/skills" className="w-full sm:w-auto text-center sm:text-left text-sm sm:text-lg font-bold bg-indigo-600/20 hover:bg-indigo-600/40 text-indigo-300 hover:text-white px-6 py-3 rounded-2xl transition-all border border-indigo-500/30 flex items-center justify-center gap-2 shadow-lg shadow-indigo-900/20">
                 <span>+</span> New Path
               </Link>
             </div>
@@ -222,39 +222,39 @@ export default function Dashboard() {
                       <div className="absolute bottom-0 left-0 -ml-24 -mb-24 w-56 h-56 bg-indigo-600/20 rounded-full blur-[80px] opacity-30"></div>
 
                       <div className="relative z-10 flex flex-col h-full">
-                        <div className="flex justify-between items-start mb-6">
+                        <div className="flex flex-col lg:flex-row justify-between items-start gap-6 mb-6">
                           <div className="flex-1">
-                            <h3 className="text-4xl font-black font-heading text-white group-hover:text-indigo-200 transition-colors line-clamp-1 mb-3 tracking-wide">
+                            <h3 className="text-2xl lg:text-4xl font-black font-heading text-white group-hover:text-indigo-200 transition-colors line-clamp-2 md:line-clamp-1 mb-3 tracking-wide">
                               {rm.skill || "Unknown Skill"}
                             </h3>
-                            <div className="flex items-center gap-4">
-                              <span className="text-sm font-bold tracking-widest text-indigo-300 uppercase bg-indigo-500/20 px-4 py-1.5 rounded-xl border border-indigo-500/20 shadow-sm">
+                            <div className="flex flex-wrap items-center gap-2 md:gap-4">
+                              <span className="text-xs md:text-sm font-bold tracking-widest text-indigo-300 uppercase bg-indigo-500/20 px-3 py-1.5 md:px-4 md:py-1.5 rounded-xl border border-indigo-500/20 shadow-sm">
                                 {rm.level}
                               </span>
-                              {isTech && <span className="text-sm font-bold text-cyan-300 bg-cyan-900/40 px-4 py-1.5 rounded-xl border border-cyan-700/50 shadow-sm flex items-center gap-2">💻 Tech</span>}
+                              {isTech && <span className="text-xs md:text-sm font-bold text-cyan-300 bg-cyan-900/40 px-3 py-1.5 md:px-4 md:py-1.5 rounded-xl border border-cyan-700/50 shadow-sm flex items-center gap-2">💻 Tech</span>}
                             </div>
                           </div>
 
                           {/* Circular Progress (Larger) */}
-                          <div className="relative w-24 h-24 flex items-center justify-center bg-slate-950/30 rounded-full backdrop-blur-sm shadow-inner border border-white/5">
+                          <div className="relative w-20 h-20 md:w-24 md:h-24 flex-shrink-0 flex items-center justify-center bg-slate-950/30 rounded-full backdrop-blur-sm shadow-inner border border-white/5 self-end lg:self-start">
                             <svg className="w-full h-full transform -rotate-90 p-1">
-                              <circle cx="44" cy="44" r="36" stroke="currentColor" strokeWidth="8" fill="transparent" className="text-slate-800" />
-                              <circle cx="44" cy="44" r="36" stroke="currentColor" strokeWidth="8" fill="transparent"
+                              <circle cx="50%" cy="50%" r="36%" stroke="currentColor" strokeWidth="8" fill="transparent" className="text-slate-800" />
+                              <circle cx="50%" cy="50%" r="36%" stroke="currentColor" strokeWidth="8" fill="transparent"
                                 className={`${percent === 100 ? 'text-emerald-400' : 'text-indigo-400'}`}
                                 strokeDasharray={226}
                                 strokeDashoffset={226 - (226 * percent) / 100}
                                 strokeLinecap="round"
                               />
                             </svg>
-                            <span className="absolute text-xl font-bold text-white">{percent}%</span>
+                            <span className="absolute text-lg md:text-xl font-bold text-white">{percent}%</span>
                           </div>
                         </div>
 
-                        <div className="flex items-center justify-between text-lg text-slate-400 mb-6 mt-auto font-medium">
-                          <span className="flex items-center gap-3 bg-slate-900/40 px-4 py-2 rounded-xl border border-white/5">
-                            <span className={`${streak > 0 ? 'text-amber-400' : 'text-slate-600'} text-2xl`}>🔥</span> {streak} Day Streak
+                        <div className="flex flex-wrap items-center justify-between gap-4 text-sm md:text-lg text-slate-400 mb-6 mt-auto font-medium">
+                          <span className="flex items-center gap-2 bg-slate-900/40 px-3 py-2 md:px-4 md:py-2 rounded-xl border border-white/5">
+                            <span className={`${streak > 0 ? 'text-amber-400' : 'text-slate-600'} text-lg md:text-2xl`}>🔥</span> {streak} Day Streak
                           </span>
-                          <span className="bg-slate-900/40 px-4 py-2 rounded-xl border border-white/5 text-slate-300">{completed}/{total} Modules</span>
+                          <span className="bg-slate-900/40 px-3 py-2 md:px-4 md:py-2 rounded-xl border border-white/5 text-slate-300">{completed}/{total} Modules</span>
                         </div>
 
                         {/* Progress Bar */}
@@ -281,8 +281,8 @@ export default function Dashboard() {
           {/* =====================
               RIGHT: AI MENTOR (Span 4 - NARROWER)
           ====================== */}
-          <div className="lg:col-span-12 xl:col-span-4 animate-slide-up" style={{ animationDelay: '0.2s' }}>
-            <div className="glass-panel h-[calc(100vh-180px)] flex flex-col relative overflow-hidden border border-white/10 shadow-2xl rounded-3xl">
+          <div className="lg:col-span-12 xl:col-span-4 animate-slide-up mt-8 lg:mt-0" style={{ animationDelay: '0.2s' }}>
+            <div className="glass-panel h-[600px] lg:h-[calc(100vh-180px)] flex flex-col relative overflow-hidden border border-white/10 shadow-2xl rounded-3xl">
               {/* Background ambient glow */}
               <div className="absolute top-0 right-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-[80px]"></div>
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-violet-500/10 rounded-full blur-[80px]"></div>
@@ -355,20 +355,20 @@ export default function Dashboard() {
               </div>
 
               {/* Input Area */}
-              <div className="p-4 border-t border-white/5 bg-black/20 backdrop-blur-xl">
-                <div className="flex gap-5">
+              <div className="p-3 sm:p-4 border-t border-white/5 bg-black/20 backdrop-blur-xl">
+                <div className="flex gap-2 sm:gap-5">
                   <input
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     onKeyDown={(e) => e.key === 'Enter' && sendMessage()}
                     placeholder="Type your question..."
-                    className="flex-1 bg-slate-900/80 border border-slate-700 rounded-2xl px-6 py-4 text-white text-lg placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all font-sans shadow-inner"
+                    className="flex-1 bg-slate-900/80 border border-slate-700 rounded-2xl px-4 py-3 sm:px-6 sm:py-4 text-white text-base sm:text-lg placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all font-sans shadow-inner w-full"
                   />
                   <button
                     onClick={sendMessage}
-                    className="bg-indigo-600 hover:bg-indigo-500 text-white w-16 rounded-2xl font-semibold shadow-lg shadow-indigo-500/20 transition-all active:scale-95 flex items-center justify-center hover:scale-105"
+                    className="bg-indigo-600 hover:bg-indigo-500 text-white min-w-[3rem] w-auto sm:w-16 px-4 sm:px-0 flex-shrink-0 rounded-2xl font-semibold shadow-lg shadow-indigo-500/20 transition-all active:scale-95 flex items-center justify-center hover:scale-105"
                   >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6 sm:w-7 sm:h-7">
                       <path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z" />
                     </svg>
                   </button>
