@@ -32,64 +32,64 @@ export default function Login() {
         <div className="absolute top-[20%] right-[20%] w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-[100px] animate-float"></div>
       </div>
 
-      <div className="glass-panel w-full max-w-4xl p-16 relative z-10 animate-slide-up backdrop-blur-xl border border-white/10 shadow-2xl">
-        <div className="text-center mb-16">
-          <div className="w-32 h-32 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-[2.5rem] mx-auto mb-10 flex items-center justify-center text-7xl shadow-lg shadow-indigo-500/30 animate-float">
+      <div className="glass-panel w-full max-w-lg p-10 relative z-10 animate-slide-up backdrop-blur-xl border border-white/10 shadow-2xl">
+        <div className="text-center mb-10">
+          <div className="w-20 h-20 bg-gradient-to-tr from-indigo-500 to-purple-500 rounded-2xl mx-auto mb-6 flex items-center justify-center text-4xl shadow-lg shadow-indigo-500/30 animate-float">
             🚀
           </div>
-          <h1 className="text-8xl font-bold font-heading bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent mb-6">
+          <h1 className="text-4xl font-bold font-heading bg-gradient-to-r from-white to-slate-400 bg-clip-text text-transparent mb-3">
             Welcome
           </h1>
-          <p className="text-slate-400 text-4xl">
+          <p className="text-slate-400 text-base">
             Continue your journey to mastery
           </p>
         </div>
 
         {error && (
-          <div className="mb-10 p-6 rounded-2xl bg-red-500/10 border border-red-500/20 text-red-400 text-2xl flex items-center gap-4 animate-fade-in">
-            <span className="text-4xl">⚠️</span> {error}
+          <div className="mb-8 p-4 rounded-lg bg-red-500/10 border border-red-500/20 text-red-400 text-base flex items-center gap-3 animate-fade-in">
+            <span className="text-xl">⚠️</span> {error}
           </div>
         )}
 
-        <form onSubmit={submit} className="space-y-10">
+        <form onSubmit={submit} className="space-y-6">
           <div className="group">
-            <label className="block text-2xl font-medium text-slate-400 uppercase tracking-wider mb-4 ml-2">Email Address</label>
+            <label className="block text-sm font-medium text-slate-400 uppercase tracking-wider mb-2.5 ml-1">Email Address</label>
             <div className="relative">
               <input
                 type="email"
                 placeholder="name@company.com"
-                className="w-full bg-slate-900/50 border border-slate-700 rounded-3xl px-8 py-8 pl-20 text-3xl text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-4 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all group-hover:border-slate-600"
+                className="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-5 py-4 pl-12 text-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all group-hover:border-slate-600"
                 value={form.email}
                 onChange={(e) => setForm({ ...form, email: e.target.value })}
                 required
               />
-              <span className="absolute left-7 top-8 text-slate-500 text-4xl">✉️</span>
+              <span className="absolute left-4 top-4 text-slate-500 text-xl">✉️</span>
             </div>
           </div>
 
           <div className="group">
-            <label className="block text-2xl font-medium text-slate-400 uppercase tracking-wider mb-4 ml-2">Password</label>
+            <label className="block text-sm font-medium text-slate-400 uppercase tracking-wider mb-2.5 ml-1">Password</label>
             <div className="relative">
               <input
                 type="password"
                 placeholder="••••••••"
-                className="w-full bg-slate-900/50 border border-slate-700 rounded-3xl px-8 py-8 pl-20 text-3xl text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-4 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all group-hover:border-slate-600"
+                className="w-full bg-slate-900/50 border border-slate-700 rounded-xl px-5 py-4 pl-12 text-lg text-slate-200 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/50 focus:border-indigo-500 transition-all group-hover:border-slate-600"
                 value={form.password}
                 onChange={(e) => setForm({ ...form, password: e.target.value })}
                 required
               />
-              <span className="absolute left-7 top-8 text-slate-500 text-4xl">🔒</span>
+              <span className="absolute left-4 top-4 text-slate-500 text-xl">🔒</span>
             </div>
           </div>
 
-          <button className="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white text-4xl font-bold py-8 rounded-3xl shadow-lg shadow-indigo-500/20 transition-all transform hover:scale-[1.02] active:scale-[0.98] mt-12 flex items-center justify-center gap-6">
+          <button className="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white text-lg font-bold py-5 rounded-xl shadow-lg shadow-indigo-500/20 transition-all transform hover:scale-[1.02] active:scale-[0.98] mt-6 flex items-center justify-center gap-3">
             <span>Login to Dashboard</span>
-            <span className="opacity-70 text-4xl">→</span>
+            <span className="opacity-70 text-xl">→</span>
           </button>
         </form>
 
-        <div className="mt-16 text-center">
-          <p className="text-slate-400 text-3xl">
+        <div className="mt-10 text-center">
+          <p className="text-slate-400 text-base">
             Don't have an account?{" "}
             <Link to="/register" className="text-indigo-400 hover:text-indigo-300 font-semibold transition-colors hover:underline">
               Create an account
